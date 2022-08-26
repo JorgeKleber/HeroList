@@ -1,4 +1,5 @@
-﻿using HeroList.Core.ViewModels;
+﻿using HeroList.Core.Services;
+using HeroList.Core.ViewModels;
 using MvvmCross;
 using MvvmCross.ViewModels;
 using System;
@@ -17,7 +18,7 @@ namespace HeroList.Core
 		{
 			base.Initialize();
 
-			//Mvx.IoCProvider.RegisterType<IService, ServiceImplementation>();
+			Mvx.IoCProvider.RegisterType<IHeroService, HeroService>();
 			RegisterAppStart<MainViewModel>();
 		}
 	}
